@@ -1,0 +1,107 @@
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    /* border-left: 1px solid #dadada;
+    border-right: 1px solid #dadada; */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #999;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@font-face {
+    font-family: 'unna';
+    src: url("./fonts/Unna-Light.otf");
+}
+body {
+    width: 100%;
+    height: fit-content;
+    font-family: 'unna';
+    padding: 0;
+    margin: 0;
+}
+.cabecalho-guia {
+    width: 100%;
+    height: fit-content;
+    margin: 0 auto;
+    background: #f5f5f5;
+    border-bottom: 1px solid #dadada;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+}
+.cabecalho-guia p {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin: 5px 0px;
+}
+
+
+/* ----------------------------------------------------------------------------------------- */
+
+
+.vazio-selecione {
+    font-size: 14px;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 2px dashed #dadada;
+    box-sizing: border-box;
+}
+.vazio-selecione h2 {
+    font-weight: normal;
+    text-align: center;
+    margin: 40% auto;
+    cursor: default;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------- */
+
+
+.servicos-iframe {
+    width: 100%;
+    font-size: 20px;
+}
+
+.servicos-iframe-bg {
+    width: 100%;
+    height: 250px;
+    margin-top: 26px;
+    background-position: center;
+    background-size: cover;
+}
+.servicos-iframe-bg::before {
+    content: "Erro: Não foi possível carregar a imagem de fundo.";
+    font-size: 14px;
+    padding: 20px;
+    float: left;
+    position: absolute;
+    z-index: -1;
+}
+.servicos-iframe-box {
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+.servicos-iframe-imgs {
+    columns: 2;
+    column-gap: 5px;
+}
+.servicos-iframe-box img {
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+}

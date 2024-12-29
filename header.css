@@ -1,0 +1,168 @@
+header {
+    width: 1024px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between !important;
+    /*border-bottom: 1px dashed #111;*/
+}
+
+.logo {
+    background: url("./imgs/logo-topo.svg") no-repeat;
+    width: calc(1024px / 3.5);
+    height: 100%;
+    background-position: center !important;
+    background-size: contain !important;
+}
+
+nav{
+    margin: auto 0;
+}
+
+nav ul {
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #111;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.insta-link {
+    padding: 15px;
+    margin-right: 10px;
+}
+
+.wpp-link {
+    padding: 15px;
+    border: 1px solid #111;
+    background: #fff;
+    color: #111;
+}
+
+.wpp-link:hover {
+    text-decoration: none;
+    background: #111;
+    color: #fff;
+}
+
+.wpp-link::after {
+    content: '→';
+    font-size: 18px;
+    padding-left: 10px;
+    margin-left: -25px;
+    opacity: 0;
+    transition: margin-left 0.2s, opacity 0.1s ease-out;
+    color: #fff;
+}
+
+.wpp-link:hover::after {
+    transition: margin-left 0.2s, opacity 0.1s ease-in;
+    margin-left: 0px;
+    opacity: 1;
+
+}
+
+.insta-logo {
+    display: inline-flex;
+    width: 18px;
+    height: 18px;
+    background: url("./imgs/insta.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 10px;
+    margin-bottom: -3px;
+    will-change: auto;
+}
+
+.wpp-logo {
+    display: inline-flex;
+    width: 18px;
+    height: 18px;
+    background: url("./imgs/wpp.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 10px;
+    margin-bottom: -5px;
+    will-change: auto;
+}
+
+.wpp-link:hover .wpp-logo {
+    filter: invert(1);
+}
+
+
+/* ----------------------------------------------------------------------------------------- */
+
+
+@media (max-width: 600px) {
+
+    header {
+        width: 100%;
+        height: 120px;
+        padding: 0px 10px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #dadada;
+    }
+
+    nav .menu-header{
+        box-sizing: border-box;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    .logo {
+        width: 160px;
+        background: url("./imgs/logo-baixo.svg") no-repeat;
+    }
+
+    .insta-link {
+        padding: 0px;
+        margin-left: -20px;
+        font-size: 0px;
+        line-height: 0px;
+    }
+
+    .wpp-link {
+        padding: 0px;
+        border: none;
+        font-size: 0px;
+        line-height: 0px;
+    }
+    .wpp-link::after {
+        content: '';
+        display: none;
+    }
+
+    .wpp-link:hover {
+        background: #fff;
+        color: #111;
+    }
+    .wpp-link:hover .wpp-logo {
+        filter: none;
+    }
+    .insta-logo, .wpp-logo {
+        margin-bottom: auto;
+        width: 20px;
+        height: 20px;
+        margin-right: 0px;
+    }
+    .menu-header li {
+        width: 22px;
+        height: 22px;
+        box-sizing: border-box;
+    }
+     
+}
